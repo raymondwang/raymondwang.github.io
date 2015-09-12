@@ -1,33 +1,33 @@
 // Tooltips
 $('[data-toggle="tooltip"]').tooltip();
 
-// Navbar
-$(".nav li a[href^='#']").on('click', function(e) {
+// Navigation
+function relocate(e, nav, speed) {
   e.preventDefault();
-  var hash = this.hash;
+  var hash = nav || null, distance = 0, offset = 80, scrollSpeed = speed || 400;
+
+  if (hash) {
+    distance = $(hash).offset().top - offset;
+  }
+
   $('html, body').animate({
-    scrollTop: $(hash).offset().top
-  }, 400, function() {
-    window.location.hash = hash;
+    scrollTop: distance
+  }, scrollSpeed, 'linear', function() {
+    window.location.hash = hash || '';
   });
+};
+
+$(".nav li a[href^='#']").on('click tap', function(e) {
+  relocate(e, this.hash);
 });
 
-$('.fa-chevron-down').on('click', function() {
-  var hash = '#profile';
-  $('html, body').animate({
-    scrollTop: $(hash).offset().top
-  }, 400, function() {
-    window.location.hash = hash;
-  });
+$('.fa-chevron-down').on('click tap', function(e) {
+  relocate(e, '#profile', 600);
 });
 
-$('.fa-chevron-up').on('click', function() {
-  $('html, body').animate({
-    scrollTop: 0
-  }, 400, function() {
-    window.location.hash = '';
-    // history.pushState("", document.title, window.location.pathname);
-  });
+$('.fa-chevron-up').on('click tap', function(e) {
+  relocate(e);
+  // history.pushState("", document.title, window.location.pathname);
 });
 
 // Cover parallax
@@ -39,7 +39,7 @@ if (window.matchMedia('(max-width: 600px)').matches) {
 };
 
 // Project links: WIP
-$('.project-container').on('click', function() {
+$('.project-container').on('click tap', function() {
   // if (window.matchMedia('(max-width: 767px)').matches) {
     window.open($(this).attr('href'), '_blank');
   // }

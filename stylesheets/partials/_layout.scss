@@ -21,6 +21,7 @@ section.overlay {
   width: 100vw;
   text-align: center;
   padding: 75px 40px;
+  // margin-top: -75px;
   @media (max-width: $breakpoint-xs) {
     padding: 75px 15px;
   }

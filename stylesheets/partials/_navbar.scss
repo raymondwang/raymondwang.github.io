@@ -9,15 +9,25 @@
     display: inline;
     top: 50%;
     bottom: 50%;
-    left: 2vw;
+    width: 100%;
     margin-top: -1.5em;
-    & > a {
+    & > .navbar-left, & > .navbar-right {
+      padding: 0;
+      margin-bottom: 0;
+    }
+    & > .navbar-left {
+      margin-left: 15px;
+    }
+    & > .navbar-right {
+      margin-right: 15px;
+    }
+    & a {
       color: #424242;
       &:hover {
         color: black; // could alternate order
       }
     }
-    @media screen and (max-width: $breakpoint-sm) {
+    @media screen and (max-width: $breakpoint-xs) {
       display: none;
     }
   }
