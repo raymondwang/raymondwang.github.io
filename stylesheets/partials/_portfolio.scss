@@ -12,6 +12,10 @@
   }
 }
 
+.project-container {
+  cursor: pointer;
+}
+
 @media screen and (min-width: $breakpoint-sm) {
   .project-container {
   	perspective: 1000px;
@@ -105,10 +109,10 @@
       font-family: $raleway;
       padding: 20px 0;
       border-bottom: 2px solid white;
-      &:hover {
-        text-decoration: underline;
-        cursor: pointer;
-      }
+      // &:hover {
+      //   text-decoration: underline;
+      //   cursor: pointer;
+      // }
     }
   }
 }

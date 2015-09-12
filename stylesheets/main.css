@@ -128,6 +128,9 @@ section.overlay {
         border: 5px solid #434343;
         cursor: pointer; } }
 
+.project-container {
+  cursor: pointer; }
+
 @media screen and (min-width: 768px) {
   .project-container {
     perspective: 1000px; }
@@ -195,9 +198,6 @@ section.overlay {
       font-family: "Raleway", sans-serif;
       padding: 20px 0;
       border-bottom: 2px solid white; }
-      .back > .project-back > .project-title:hover {
-        text-decoration: underline;
-        cursor: pointer; }
 
 .project, .project-back {
   margin-top: 25px;

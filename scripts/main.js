@@ -39,15 +39,15 @@ if (window.matchMedia('(max-width: 600px)').matches) {
 };
 
 // Project links: WIP
-$('.project').on('click', function() {
-  if (window.matchMedia('(max-width: 767px)').matches) {
+$('.project-container').on('click', function() {
+  // if (window.matchMedia('(max-width: 767px)').matches) {
     window.open($(this).attr('href'), '_blank');
-  }
+  // }
 });
 
-$('.project-title').on('click', function() {
-  window.open($(this).attr('href'), '_blank');
-});
+// $('.project-title').on('click', function() {
+//   window.open($(this).attr('href'), '_blank');
+// });
 
 // $('.project-title').mouseenter(function() {
 //   $(this).addClass('project-title-active');
