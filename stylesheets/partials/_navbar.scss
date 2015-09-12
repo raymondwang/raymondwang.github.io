@@ -1,0 +1,85 @@
+.navbar {
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+  background: #e0e0e0;
+
+  & > .navbar-header {
+    position: absolute;
+    display: inline;
+    top: 50%;
+    bottom: 50%;
+    left: 2vw;
+    margin-top: -1.5em;
+    & > a {
+      color: #424242;
+      &:hover {
+        color: black; // could alternate order
+      }
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+
+  .navbar-body {
+    text-align: center;
+    line-height: 0;
+    & > .navbar-nav {
+      float: none;
+      margin: 0;
+      font-size: 0;
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+      & > .active {
+        & > a {
+          background: #9e9e9e;
+          box-shadow: inset 0 0 8px rgba(0, 0, 0, .6);
+          color: black;
+        }
+        & > a:hover {
+          background: #9e9e9e;
+          color: black;
+        }
+      }
+      & > li {
+        float: none !important;
+        font-size: 18px;
+        display: inline-block;
+        vertical-align: top;
+        & > a {
+          color: black;
+          &:hover {
+            background: white;
+            color: black;
+          }
+          & .nav-icon {
+            height: 3em;
+          }
+        }
+
+        @media screen and (max-width: 425px) {
+          & > a > .fa-3x {
+            font-size: 2em;
+          }
+          & > a > .nav-icon {
+            height: 2em;
+          }
+        }
+        @media screen and (max-width: 339px) {
+          & > a > .fa-3x {
+            font-size: 1em;
+          }
+          & > a > .nav-icon {
+            height: 1em;
+          }
+        }
+      }
+      & > .nav-contact {
+        @media screen and (min-width: $breakpoint-sm) {
+          display: none;
+        }
+      }
+    }
+  }
+}

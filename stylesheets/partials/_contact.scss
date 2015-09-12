@@ -1,0 +1,39 @@
+#contact, footer {
+  width: 100vw;
+  min-height: 10vh;
+  text-align: center;
+  background-color: $gray;
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+  #contact {
+    display: none;
+  }
+}
+
+.contact-row {
+  height: 25vh;
+  & > .contact-links > a {
+    &:hover {
+      color: whitesmoke;
+    }
+    & > i {
+      line-height: 25vh;
+    }
+  }
+}
+
+footer {
+  & > .row {
+    height: 15vh;
+    & > .fa-chevron-up {
+      &:hover {
+        cursor: pointer;
+        color: whitesmoke;
+      }
+    }
+  }
+  @media screen and (max-width: $breakpoint-xs) {
+    display: none;
+  }
+}

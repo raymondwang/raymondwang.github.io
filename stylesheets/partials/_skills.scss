@@ -1,0 +1,31 @@
+#skills {
+  min-height: 50vh;
+}
+
+.skills-col {
+  border-right: 1px solid white;
+
+  &:last-of-type {
+    border-right: 0;
+  }
+  @media screen and (max-width: $breakpoint-xs) {
+    border-right: 0;
+  }
+
+  & > .skills-section {
+    font-family: $raleway;
+    font-size: 24px;
+    @media screen and (min-width: $breakpoint-sm) {
+      margin-bottom: 30px;
+    }
+    @media screen and (max-width: $breakpoint-xs) {
+      margin-top: 20px;
+    }
+  }
+
+  & > .skills-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,30 @@
+/* Meta */
+html, body {
+  width: auto;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Alegreya', serif;
+  font-size: 18px;
+}
+
+/* Variables */
+$breakpoint-xxs: 332px; // max-width
+$breakpoint-xs: 767px; // max-width
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+
+$red: #EB3349;
+$copy-color: #757575;
+$gray: #434343;
+$raleway: 'Raleway', sans-serif;
+
+@import 'partials/navbar',
+        'partials/layout',
+        'partials/profile',
+        'partials/portfolio',
+        'partials/experience',
+        'partials/skills',
+        'partials/contact';

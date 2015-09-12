@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Raymond Wang is an aspiring web developer.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Raymond Wang</title>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700|Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="stylesheets/vendor/bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/vendor/bootstrap-theme.css">
+    <link rel="stylesheet" href="stylesheets/vendor/font-awesome.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <script type="text/javascript" src="scripts/vendor/jquery.js"></script>
+    <script type="text/javascript" src="scripts/vendor/bootstrap.js"></script>
+    <script type="text/javascript" src="scripts/vendor/parallax.js"></script>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <a href="mailto:raymond@raymondwang.me" target="_blank"><i class="fa fa-at fa-3x" data-toggle="tooltip" data-placement="bottom" title="Email"></i></a>
+        <a href="https://github.com/raymondwang" target="_blank"><i class="fa fa-github fa-3x" data-toggle="tooltip" data-placement="bottom" title="Github"></i></a>
+        <a href="https://www.linkedin.com/in/raymondruiwang" target="_blank"><i class="fa fa-linkedin-square fa-3x" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"></i></a>
+      </div>
+
+      <div class="navbar-body">
+        <ul class="nav navbar-nav">
+          <li data-toggle="tooltip" data-placement="bottom" title="Profile"><a href="#profile"><img src="images/profile-icon.png" alt="" class="nav-icon"></a></li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Portfolio"><a href="#portfolio"><i class="fa fa-laptop fa-3x"></i></a></li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Experience"><a href="#experience"><i class="fa fa-file-text-o fa-3x"></i></a></li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Skills"><a href="#skills"><i class="fa fa-pencil fa-3x"></i></a></li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Contact" class="nav-contact"><a href="#contact"><i class="fa fa-paper-plane-o fa-3x"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="cover" data-parallax="scroll" data-image-src="images/cover.png">
+      <div class="row">
+        <i class="fa fa-chevron-down fa-5x"></i>
+      </div>
+    </section>
+
+    <section id="profile" class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <img src="images/headshot.png" alt="" class="headshot">
+            <p class="bio">
+              I'm Raymond Wang, an aspiring web developer. With a Bachelor's degree in English and Political Science, I recently turned to programming as a way to realize my dreams of making my mark on the world. I am passionate about my projects, and I strive to better myself in measurable steps with each one I take on. I have experience with development across the stack, and I am looking for opportunities to advance my career alongside my education and my passion.
+            </p>
+            <p class="bio">
+              When I'm not working on my next project, I can usually be found indulging myself in music or literature. My ideal weekend is one spent at a music festival or concert; in case of emergency my backup plan has always consisted of dropping everything to pursue rockstardom, but unfortunately things have been going pretty well so far.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="project-container" ontouchstart="this.classList.toggle('hover');">
+            	<div class="flipper">
+            		<div class="front">
+            			<img src="images/projects/emphasize.png" alt="Emphasize: a to-do list app" href="http://104.236.234.206" class="project">
+                  <span class="fa fa-share fa-3x"></span>
+            		</div>
+            		<div class="back">
+            			<div class="project-back">
+            			  <h3 class="project-title" href="http://104.236.234.206">Emphasize</h3>
+                    <p class="project-summary">
+                      A minimalist to-do list app designed around prioritization.
+                      <br><br>
+                      Runs primarily on Sinatra, PostgreSQL, Backbone, and JavaScript libraries.
+                    </p>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4">
+            <div class="project-container" ontouchstart="this.classList.toggle('hover');">
+            	<div class="flipper">
+            		<div class="front">
+            			<img src="images/projects/restaurant.png" alt="Restaurant Management App" href="http://104.236.114.64" class="project">
+                  <span class="fa fa-share fa-3x"></span>
+            		</div>
+            		<div class="back">
+            			<div class="project-back">
+            			  <h3 class="project-title" href="http://104.236.114.64">Not Chinese Food</h3>
+                    <p class="project-summary">
+                      A restaurant management app designed for servers and cooks.
+                      <br><br>
+                      Written mostly in Ruby, a PostgreSQL database, and Sinatra. Awful jokes produced independently.
+                    </p>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4">
+            <div class="project-container" ontouchstart="this.classList.toggle('hover');">
+            	<div class="flipper">
+            		<div class="front">
+            			<img src="images/projects/blackjack.png" alt="Blackjack" href="http://raymondwang.me/Blackjack" class="project">
+                  <span class="fa fa-share fa-3x"></span>
+            		</div>
+            		<div class="back">
+            			<div class="project-back">
+            			  <h3 class="project-title" href="http://raymondwang.me/Blackjack">Blackjack</a></h3>
+                    <p class="project-summary">
+                      A single-player Blackjack game designed with nostalgia.
+                      <br><br>
+                      Made with JavaScript, jQuery, and CSS in my third week of study at General Assembly.
+                    </p>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2">
+            <p class="exp-section">Education</p>
+          </div>
+          <div class="col-sm-7">
+            <p class="exp-position">Web Development Immersive</p>
+            <p class="exp-organization">General Assembly</p>
+          </div>
+          <div class="col-sm-3">
+            <p class="exp-date">2015</p>
+            <p class="exp-location">New York, NY</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-7 col-sm-offset-2">
+            <p class="exp-position">B.A. in English</p>
+            <p class="exp-organization">
+              Rutgers, the State University of New Jersey
+            </p>
+          </div>
+          <div class="col-sm-3">
+            <p class="exp-date">2011 – 2015</p>
+            <p class="exp-location">New Brunswick, NJ</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+            <p class="exp-section">Experience</p>
+          </div>
+          <div class="col-sm-7">
+            <p class="exp-position">Secretary-General</p>
+            <p class="exp-organization">Institute for Domestic & International Affairs, Inc.</p>
+            <p class="exp-summary">The Institute for Domestic & International Affairs, Inc. is a nonprofit organization dedicated to providing programming in civic education for teachers and students. My greatest responsibility at IDIA was heading a Model United Nations conference as its Secretary-General, which included recruiting and leading a staff of more than fifty undergraduates, hosting more than five hundred students from around the world, and organizing a conference theme and delivering a keynote.</p>
+          </div>
+          <div class="col-sm-3">
+            <p class="exp-date">2012 – 2015</p>
+            <p class="exp-location">New Brunswick, NJ</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-7 col-sm-offset-2">
+            <p class="exp-position">Public Affairs Trainee</p>
+            <p class="exp-organization">M Public Affairs</p>
+            <p class="exp-summary">M Public Affairs is a full-service public affairs firm specializing in innovative campaign management and strategic consulting with offices. As a trainee, I worked on several different campaigns, notably including the <a class="expLink" href="http://forwardnewjersey.com/">Forward NJ coalition</a> and <a class="expLink" href="http://www.amwater.com/njaw/about-us/haddonfield/">New Jersey American Water's campaign in Haddonfield, NJ</a>. In this capacity, my responsibilities comprised of conducting research and organizing data, managing media relations and publishing articles in local newspapers, and networking with policymakers and key stakeholders.</p>
+          </div>
+          <div class="col-sm-3">
+            <p class="exp-date">2014 – 2015</p>
+            <p class="exp-location">Lake Como, NJ</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-7 col-sm-offset-2">
+            <p class="exp-position">Research Assistant</p>
+            <p class="exp-organization">Aresty Research Center</p>
+            <p class="exp-summary">The Aresty Research Center's mission is to support undergraduate research at Rutgers University. As a Research Assistant, I led a yearlong research project called <em>A Comparison of English Majors at Research I Universities</em> alongside the Director of Undergraduate Studies at Rutgers. Outcomes launched by this project include the creation of a certificate program in Creative Writing, a total rehaul of the organization of the curriculum, and an updated website for the Department of English.</p>
+          </div>
+          <div class="col-sm-3">
+            <p class="exp-date">2014 – 2015</p>
+            <p class="exp-location">Lake Como, NJ</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 skills-col">
+            <h4 class="skills-section">Languages</h4>
+            <ul class="skills-list">
+              <li>JavaScript</li>
+              <li>Ruby</li>
+              <li>SQL</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+            </ul>
+          </div>
+
+          <div class="col-sm-4 skills-col">
+            <h4 class="skills-section">Frameworks</h4>
+            <ul class="skills-list">
+              <li>jQuery</li>
+              <li>Ruby on Rails</li>
+              <li>Backbone</li>
+              <li>Sinatra</li>
+              <li>Bootstrap</li>
+            </ul>
+          </div>
+
+          <div class="col-sm-4 skills-col">
+            <h4 class="skills-section">Tools</h4>
+            <ul class="skills-list">
+              <li>PostgreSQL</li>
+              <li>Git</li>
+              <li>Sass</li>
+              <li>Photoshop</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row contact-row">
+          <span class="contact-links">
+            <a href="mailto:raymond@raymondwang.me"><i class="fa fa-at fa-5x"></i></a>
+            <a href="https://github.com/raymondwang" target="_blank"><i class="fa fa-github fa-5x"></i></a>
+            <a href="https://www.linkedin.com/in/raymondruiwang" target="_blank"><i class="fa fa-linkedin-square fa-5x"></i></a>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="row">
+        <i data-toggle="tooltip" data-placement="top" title="Back to Top" class="fa fa-chevron-up fa-5x"></i>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="scripts/main.js"></script>
+  </body>
+</html>
