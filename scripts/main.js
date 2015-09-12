@@ -1,5 +1,7 @@
 // Tooltips
-$('[data-toggle="tooltip"]').tooltip();
+if (window.matchMedia('(min-width: 768px)').matches) {
+  $('[data-toggle="tooltip"]').tooltip();
+}
 
 // Navigation
 function relocate(e, nav, speed) {
