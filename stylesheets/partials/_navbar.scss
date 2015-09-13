@@ -3,6 +3,7 @@
   border: 0;
   box-shadow: none;
   background: #e0e0e0;
+  min-height: 0;
 
   & > .navbar-header {
     position: absolute;
@@ -59,6 +60,14 @@
         vertical-align: top;
         & > a {
           color: black;
+          &.nav-portfolio {
+            padding-left: 13px;
+            padding-right: 13px;
+          }
+          &.nav-experience, &.nav-skills {
+            padding-left: 19px;
+            padding-right: 19px;
+          }
           &:hover {
             background: white;
             color: black;

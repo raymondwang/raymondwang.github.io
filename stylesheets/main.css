@@ -10,7 +10,8 @@ body {
   margin: 0;
   border: 0;
   box-shadow: none;
-  background: #e0e0e0; }
+  background: #e0e0e0;
+  min-height: 0; }
   .navbar > .navbar-header {
     position: absolute;
     display: inline;
@@ -55,6 +56,12 @@ body {
         vertical-align: top; }
         .navbar .navbar-body > .navbar-nav > li > a {
           color: black; }
+          .navbar .navbar-body > .navbar-nav > li > a.nav-portfolio {
+            padding-left: 13px;
+            padding-right: 13px; }
+          .navbar .navbar-body > .navbar-nav > li > a.nav-experience, .navbar .navbar-body > .navbar-nav > li > a.nav-skills {
+            padding-left: 19px;
+            padding-right: 19px; }
           .navbar .navbar-body > .navbar-nav > li > a:hover {
             background: white;
             color: black; }
@@ -125,11 +132,14 @@ section.overlay {
 
 /* Portfolio */
 .project-container {
-  cursor: pointer; }
+  cursor: pointer;
+  margin: 25px auto; }
 
 @media screen and (min-width: 768px) {
   .project-container {
-    perspective: 1000px; }
+    perspective: 1000px;
+    width: 300px;
+    height: 300px; }
 
   .project-container:hover .flipper, .project-container.hover .flipper {
     -moz-transform: rotateY(180deg);
@@ -153,7 +163,8 @@ section.overlay {
     transform: rotateY(0deg); } }
 .front > .project {
   max-width: 300px;
-  max-height: 300px; }
+  max-height: 300px;
+  border: 5px solid white; }
   @media screen and (max-width: 767px) {
     .front > .project {
       max-width: 80%;
@@ -192,18 +203,12 @@ section.overlay {
     margin-left: auto;
     margin-right: auto;
     background-color: #546e7a;
+    border: 5px solid white;
     text-align: left; }
     .back > .project-back > .project-title {
       font-family: "Raleway", sans-serif;
       padding: 20px 0;
       border-bottom: 2px solid white; }
-
-.project, .project-back {
-  border: 5px solid white; }
-  @media screen and (max-width: 992px) {
-    .project, .project-back {
-      margin-top: 25px;
-      margin-bottom: 25px; } }
 
 #experience > .container {
   padding-left: 10vw;
@@ -285,6 +290,9 @@ section.overlay {
     color: whitesmoke; }
   .contact-row > .contact-links > a > i {
     line-height: 25vh; }
+    @media screen and (max-width: 350px) {
+      .contact-row > .contact-links > a > i {
+        font-size: 3em; } }
 
 footer > .row {
   height: 15vh; }

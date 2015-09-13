@@ -19,6 +19,9 @@
     }
     & > i {
       line-height: 25vh;
+      @media screen and (max-width: 350px) {
+        font-size: 3em;
+      }
     }
   }
 }
