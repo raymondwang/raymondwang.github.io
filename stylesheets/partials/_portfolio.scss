@@ -31,7 +31,7 @@
     -moz-transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
   	transform: rotateY(180deg);
-    cursor: pointer;
+    // cursor: pointer;
   }
 
   .flipper {
@@ -60,6 +60,7 @@
   	transform: rotateY(180deg) translateZ(1px);
     position: absolute;
     width: 100%;
+    cursor: pointer;
     & > .project-info {
       background-color: #546e7a;
     }
@@ -117,6 +118,5 @@
   &:hover {
     color: white;
     text-decoration: underline;
-    cursor: pointer;
   }
 }

@@ -41,20 +41,18 @@ if (window.matchMedia('(max-width: 600px)').matches) {
 
 // Portfolio effects
 $('.project-container').on({
-  'mouseenter': showProjectInfo,
-  'mouseleave': hideProjectInfo,
-  'click': projectLink
+  'mouseenter mouseleave tap': toggleProjectInfo,
+  'click': projectLink,
 });
 
-function showProjectInfo() {
+function toggleProjectInfo() {
   if (window.matchMedia('(max-width: 767px)').matches) {
-    $(this).find('.front > .project-info').animate({opacity: '1', backgroundColor: 'rgba(84, 110, 122, 0.8)'});
-  }
-}
-
-function hideProjectInfo() {
-  if (window.matchMedia('(max-width: 767px)').matches) {
-    $(this).find('.front > .project-info').animate({opacity: '0', backgroundColor: 'rgba(0, 0, 0, 0)'});
+    $info = $(this).find('.front > .project-info');
+    if ($info.hasClass('active-project')) {
+      $info.animate({opacity: '0', backgroundColor: 'rgba(0, 0, 0, 0)'}, 600).removeClass('active-project');
+    } else {
+      $info.animate({opacity: '1', backgroundColor: 'rgba(84, 110, 122, 0.9)'}, 600).addClass('active-project');
+    }
   }
 }
 

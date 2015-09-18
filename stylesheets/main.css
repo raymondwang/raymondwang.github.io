@@ -156,8 +156,7 @@ section.overlay {
   .project-container:hover .flipper, .project-container.hover .flipper {
     -moz-transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    cursor: pointer; }
+    transform: rotateY(180deg); }
 
   .flipper {
     transition: 0.6s;
@@ -180,7 +179,8 @@ section.overlay {
     -webkit-transform: rotateY(180deg) translateZ(1px);
     transform: rotateY(180deg) translateZ(1px);
     position: absolute;
-    width: 100%; }
+    width: 100%;
+    cursor: pointer; }
     .back > .project-info {
       background-color: #546e7a; } }
 .front > .project {
@@ -222,8 +222,7 @@ section.overlay {
   border-bottom: 2px solid white; }
   .project-title:hover {
     color: white;
-    text-decoration: underline;
-    cursor: pointer; }
+    text-decoration: underline; }
 
 #experience > .container {
   padding-left: 10vw;
