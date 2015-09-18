@@ -11,7 +11,7 @@ var isMobile = {
 };
 
 // Tooltips
-if (isMobile.any()) {
+if (!(isMobile.any())) {
   $('[data-toggle="tooltip"]').tooltip();
 }
 

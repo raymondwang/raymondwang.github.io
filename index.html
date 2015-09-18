@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Meta -->
     <meta charset="utf-8">
-    <meta name="description" content="Raymond Wang is an aspiring web developer.">
+    <meta name="description" content="Raymond Wang, web developer.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Raymond Wang</title>
 
+    <!-- Favicon tags -->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
@@ -19,64 +21,119 @@
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
 
+    <!-- Stylesheets -->
     <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700|Raleway' rel='stylesheet' type='text/css'>
-    <!-- <link rel="stylesheet" href="stylesheets/vendor/jquery-ui.min.css"> -->
     <link rel="stylesheet" href="stylesheets/vendor/bootstrap.css">
     <link rel="stylesheet" href="stylesheets/vendor/bootstrap-theme.css">
     <link rel="stylesheet" href="stylesheets/vendor/font-awesome.css">
     <link rel="stylesheet" href="stylesheets/main.css">
+
+    <!-- Scripts -->
     <script type="text/javascript" src="scripts/vendor/jquery.js"></script>
     <script type="text/javascript" src="scripts/vendor/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="scripts/vendor/jquery.mobile.min.js"></script>
     <script type="text/javascript" src="scripts/vendor/bootstrap.js"></script>
     <script type="text/javascript" src="scripts/vendor/parallax.js"></script>
+
   </head>
+
   <body data-spy="scroll" data-target=".navbar" data-offset="80">
+
+    <!-- Navigation bar -->
     <nav class="navbar navbar-default navbar-fixed-top">
+      <!-- Header -->
       <div class="navbar-header">
+
         <ul class="navbar-left">
-          <a href="mailto:raymond@raymondwang.me"><i class="fa fa-at fa-3x" data-toggle="tooltip" data-placement="bottom" title="Email"></i></a>
-          <a href="https://github.com/raymondwang" target="_blank"><i class="fa fa-github fa-3x" data-toggle="tooltip" data-placement="bottom" title="Github"></i></a>
+          <a href="mailto:raymond@raymondwang.me">
+            <i class="fa fa-at fa-3x" data-toggle="tooltip" data-placement="bottom" title="Email"></i>
+          </a>
+          <a href="https://github.com/raymondwang" target="_blank">
+            <i class="fa fa-github fa-3x" data-toggle="tooltip" data-placement="bottom" title="Github"></i>
+          </a>
         </ul>
 
         <ul class="navbar-right">
-          <a href="https://www.linkedin.com/in/raymondruiwang" target="_blank"><i class="fa fa-linkedin-square fa-3x" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"></i></a>
-          <a href="https://twitter.com/raymondrwang" target="_blank"><i class="fa fa-twitter-square fa-3x" data-toggle="tooltip" data-placement="bottom" title="Twitter"></i></a>
+          <a href="https://www.linkedin.com/in/raymondruiwang" target="_blank">
+            <i class="fa fa-linkedin-square fa-3x" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"></i>
+          </a>
+          <a href="https://twitter.com/raymondrwang" target="_blank">
+            <i class="fa fa-twitter-square fa-3x" data-toggle="tooltip" data-placement="bottom" title="Twitter"></i>
+          </a>
         </ul>
-      </div>
 
+      </div>
+      <!-- Body -->
       <div class="navbar-body">
+
         <ul class="nav navbar-nav">
-          <li data-toggle="tooltip" data-placement="bottom" title="Profile"><a href="#profile"><img src="images/profile-icon.png" alt="" class="nav-icon"></a></li>
-          <li data-toggle="tooltip" data-placement="bottom" title="Portfolio"><a href="#portfolio" class="nav-portfolio"><i class="fa fa-laptop fa-3x"></i></a></li>
-          <li data-toggle="tooltip" data-placement="bottom" title="Experience"><a href="#experience" class="nav-experience"><i class="fa fa-file-text-o fa-3x"></i></a></li>
-          <li data-toggle="tooltip" data-placement="bottom" title="Skills"><a href="#skills" class="nav-skills"><i class="fa fa-pencil fa-3x"></i></a></li>
-          <li data-toggle="tooltip" data-placement="bottom" title="Contact" class="nav-contact"><a href="#contact"><i class="fa fa-paper-plane-o fa-3x"></i></a></li>
+          <li data-toggle="tooltip" data-placement="bottom" title="Profile">
+            <a href="#profile">
+              <img src="images/profile-icon.png" alt="" class="nav-icon">
+            </a>
+          </li>
+
+          <li data-toggle="tooltip" data-placement="bottom" title="Portfolio">
+            <a href="#portfolio" class="nav-portfolio">
+              <i class="fa fa-laptop fa-3x">
+              </i>
+            </a>
+          </li>
+
+          <li data-toggle="tooltip" data-placement="bottom" title="Experience">
+            <a href="#experience" class="nav-experience">
+              <i class="fa fa-file-text-o fa-3x">
+              </i>
+            </a>
+          </li>
+
+          <li data-toggle="tooltip" data-placement="bottom" title="Skills">
+            <a href="#skills" class="nav-skills">
+              <i class="fa fa-pencil fa-3x">
+              </i>
+            </a>
+          </li>
+
+          <li data-toggle="tooltip" data-placement="bottom" title="Contact" class="nav-contact">
+            <a href="#contact">
+              <i class="fa fa-paper-plane-o fa-3x">
+              </i>
+            </a>
+          </li>
+
         </ul>
       </div>
     </nav>
 
+    <!-- Cover -->
     <section id="cover" data-parallax="scroll" data-image-src="images/cover.png">
       <div class="row">
         <i class="fa fa-chevron-down fa-5x"></i>
       </div>
     </section>
 
+    <!-- Profile -->
     <section id="profile" class="overlay">
       <div class="container">
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2">
+
             <img src="images/headshot.png" alt="" class="headshot">
+
             <p class="bio">
               I'm Raymond Wang, an aspiring web developer. With a Bachelor's degree in English and Political Science, I recently turned to programming as a way to realize my dreams of making my mark on the world. I am passionate about my projects, and I strive to better myself in measurable steps with each one I take on. I have experience with development across the stack, and I am looking for opportunities to advance my career alongside my education and my passion.
             </p>
+
             <p class="bio">
               When I'm not working on my next project, I can usually be found indulging myself in music or literature. My ideal weekend is one spent at a music festival or concert; in case of emergency my backup plan has always consisted of dropping everything to pursue rockstardom, but unfortunately things have been going pretty well so far.
             </p>
+
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Portfolio -->
     <section id="portfolio" class="overlay">
       <div class="container">
         <div class="row">
@@ -87,7 +144,9 @@
             		<div class="front">
             			<div class="project roadtrip"></div>
                   <div class="project-info">
-                    <a href="https://github.com/raymondwang/Road-Trip-Roulette"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+                    <a href="https://github.com/raymondwang/Road-Trip-Roulette">
+                      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+                    </a>
             			  <a href="https://gentle-everglades-8217.herokuapp.com/" class="project-title">Road Trip Roulette</a>
                     <p class="project-summary">
                       An app that generates a road trip with directions and nearby attractions.
@@ -116,7 +175,9 @@
             		<div class="front">
             			<div class="project emphasize"></div>
                   <div class="project-info">
-                    <a href="https://github.com/raymondwang/Emphasize"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+                    <a href="https://github.com/raymondwang/Emphasize">
+                      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+                    </a>
                     <a href="http://104.236.234.206" class="project-title">Emphasize</a>
                     <p class="project-summary">
                       A minimalist to-do list app designed for prioritization.
@@ -145,7 +206,9 @@
             		<div class="front">
                   <div class="project restaurant"></div>
                   <div class="project-info">
-                    <a href="https://github.com/raymondwang/Restaurant-App"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+                    <a href="https://github.com/raymondwang/Restaurant-App">
+                      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+                    </a>
             			  <a href="http://104.236.114.64" class="project-title">Not Chinese Food</a>
                     <p class="project-summary">
                       A restaurant management app designed for servers and cooks.
@@ -174,7 +237,9 @@
             		<div class="front">
             			<div class="project blackjack"></div>
                   <div class="project-info">
-                    <a href="https://github.com/raymondwang/Blackjack"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+                    <a href="https://github.com/raymondwang/Blackjack">
+                      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+                    </a>
             			  <a href="http://raymondwang.me/Blackjack" class="project-title">Blackjack</a>
                     <p class="project-summary">
                       A single-player Blackjack game designed with nostalgia.
@@ -200,8 +265,10 @@
       </div>
     </section>
 
+    <!-- Experience -->
     <section id="experience" class="overlay">
       <div class="container">
+        <!-- Education -->
         <div class="row">
           <div class="col-sm-2">
             <p class="exp-section">Education</p>
@@ -228,7 +295,7 @@
             <p class="exp-location">New Brunswick, NJ</p>
           </div>
         </div>
-
+        <!-- Experience -->
         <div class="row">
           <div class="col-sm-2">
             <p class="exp-section">Experience</p>
@@ -270,9 +337,11 @@
       </div>
     </section>
 
+    <!-- Skills -->
     <section id="skills" class="overlay">
       <div class="container">
         <div class="row">
+
           <div class="col-sm-4 skills-col">
             <h4 class="skills-section">Languages</h4>
             <ul class="skills-list">
@@ -308,25 +377,41 @@
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact">
       <div class="container">
         <div class="row contact-row">
           <span class="contact-links">
-            <a href="mailto:raymond@raymondwang.me"><i class="fa fa-at fa-5x"></i></a>
-            <a href="https://github.com/raymondwang" target="_blank"><i class="fa fa-github fa-5x"></i></a>
-            <a href="https://www.linkedin.com/in/raymondruiwang" target="_blank"><i class="fa fa-linkedin-square fa-5x"></i></a>
-            <a href="https://twitter.com/raymondrwang" target="_blank"><i class="fa fa-twitter-square fa-5x"></i></a>
+
+            <a href="mailto:raymond@raymondwang.me">
+              <i class="fa fa-at fa-5x"></i>
+            </a>
+
+            <a href="https://github.com/raymondwang" target="_blank">
+              <i class="fa fa-github fa-5x"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/raymondruiwang" target="_blank">
+              <i class="fa fa-linkedin-square fa-5x"></i>
+            </a>
+
+            <a href="https://twitter.com/raymondrwang" target="_blank">
+              <i class="fa fa-twitter-square fa-5x"></i>
+            </a>
+
           </span>
         </div>
       </div>
     </section>
 
+    <!-- Footer -->
     <footer>
       <div class="row">
         <i data-toggle="tooltip" data-placement="top" title="Back to Top" class="fa fa-chevron-up fa-5x"></i>
       </div>
     </footer>
 
+    <!-- JavaScript -->
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
