@@ -31,7 +31,6 @@
     -moz-transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
   	transform: rotateY(180deg);
-    // cursor: pointer;
   }
 
   .flipper {
@@ -55,12 +54,11 @@
   }
 
   .back {
-    -moz-transform: rotateY(180deg) translateZ(1px);
+    -moz-transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg) translateZ(1px);
-  	transform: rotateY(180deg) translateZ(1px);
+  	transform: rotateY(180deg);
     position: absolute;
     width: 100%;
-    cursor: pointer;
     & > .project-info {
       background-color: #546e7a;
     }
@@ -96,7 +94,6 @@
 .project-info {
   position: absolute;
   top: 0;
-  // background-color: #546e7a;
   border: 5px solid white;
   padding: 0 25px;
   margin-left: auto;

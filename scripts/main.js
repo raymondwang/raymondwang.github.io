@@ -1,5 +1,17 @@
+// Mobile detection
+var isMobile = {
+  Android: function() { return navigator.userAgent.match(/Android/i); },
+  BlackBerry: function() { return navigator.userAgent.match(/BlackBerry/i); },
+  iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+  Opera: function() { return navigator.userAgent.match(/Opera Mini/i); },
+  Windows: function() { return navigator.userAgent.match(/IEMobile/i); },
+  any: function() {
+    return ( isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows() );
+  }
+};
+
 // Tooltips
-if (window.matchMedia('(min-width: 768px)').matches) {
+if (isMobile.any()) {
   $('[data-toggle="tooltip"]').tooltip();
 }
 
@@ -32,7 +44,7 @@ $('.fa-chevron-up').on('click tap', function(e) {
 });
 
 // Cover parallax
-if (window.matchMedia('(max-width: 600px)').matches) {
+if (isMobile.any()) {
   $('#cover').attr('data-image-src', "images/phone-cover.png");
   $('#cover').parallax({imageSrc: 'images/phone-cover.png'});
 } else {
@@ -40,25 +52,40 @@ if (window.matchMedia('(max-width: 600px)').matches) {
 };
 
 // Portfolio effects
-$('.project-container').on({
-  'mouseenter mouseleave tap': toggleProjectInfo,
-  'click': projectLink,
+$('.front > .project-info').on({
+  'tap': toggleProjectInfo,
+  'mouseenter': showProjectInfo,
+  'mouseleave': hideProjectInfo
 });
 
+// $('.project-container').on('click', projectLink);
+
 function toggleProjectInfo() {
-  if (window.matchMedia('(max-width: 767px)').matches) {
-    $info = $(this).find('.front > .project-info');
-    if ($info.hasClass('active-project')) {
-      $info.animate({opacity: '0', backgroundColor: 'rgba(0, 0, 0, 0)'}, 600).removeClass('active-project');
+  if (isMobile.any()) {
+    if ($(this).hasClass('active-project')) {
+      $(this).animate({opacity: '0', backgroundColor: 'rgba(0, 0, 0, 0)'}).removeClass('active-project');
     } else {
-      $info.animate({opacity: '1', backgroundColor: 'rgba(84, 110, 122, 0.9)'}, 600).addClass('active-project');
+      $(this).animate({opacity: '1', backgroundColor: 'rgba(84, 110, 122, 0.85)'}).addClass('active-project');
     }
   }
 }
 
-// events on back currently unreliable
-function projectLink() {
-  if (window.matchMedia('(min-width: 768px)').matches) {
-    window.open($(this).attr('href'), '_blank');
+// separated from toggle in order to check screen width each time, rather than on init
+function showProjectInfo() {
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    $(this).animate({opacity: '1', backgroundColor: 'rgba(84, 110, 122, 0.85)'});
   }
 }
+
+function hideProjectInfo() {
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    $(this).animate({opacity: '0', backgroundColor: 'rgba(0, 0, 0, 0)'});
+  }
+}
+
+// -webkit-transform sometimes makes the link on the back unreliable; continue testing
+// function projectLink() {
+//   if (window.matchMedia('(min-width: 768px)').matches) {
+//     window.open($(this).attr('href'), '_blank');
+//   }
+// }
