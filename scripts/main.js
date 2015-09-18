@@ -54,6 +54,14 @@ if (isMobile.any()) {
 // Portfolio effects
 if (isMobile.any()) {
   $('.front > .project-info').on('click', toggleProjectInfo);
+
+  // prevents clicking on project title before visible
+  $('.front > .project-info > .project-title').on('click', function(e) {
+    if ($(this).parent().css('opacity') < 1) {
+      e.preventDefault();
+      $(this).css({textDecoration: 'none'});
+    }
+  });
 } else {
   $('.front > .project-info').on({
     'mouseenter': function() {
