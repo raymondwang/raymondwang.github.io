@@ -53,7 +53,7 @@ if (isMobile.any()) {
 
 // Portfolio effects
 if (isMobile.any()) {
-  $('.front > .project-info').on('tap', toggleProjectInfo);
+  $('.front > .project-info').on('click', toggleProjectInfo);
 } else {
   $('.front > .project-info').on({
     'mouseenter': function() {
