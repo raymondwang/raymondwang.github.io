@@ -20,11 +20,13 @@
     <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
 
     <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700|Raleway' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="stylesheets/vendor/jquery-ui.min.css"> -->
     <link rel="stylesheet" href="stylesheets/vendor/bootstrap.css">
     <link rel="stylesheet" href="stylesheets/vendor/bootstrap-theme.css">
     <link rel="stylesheet" href="stylesheets/vendor/font-awesome.css">
     <link rel="stylesheet" href="stylesheets/main.css">
     <script type="text/javascript" src="scripts/vendor/jquery.js"></script>
+    <script type="text/javascript" src="scripts/vendor/jquery-ui.min.js"></script>
     <script type="text/javascript" src="scripts/vendor/bootstrap.js"></script>
     <script type="text/javascript" src="scripts/vendor/hammer.min.js"></script>
     <script type="text/javascript" src="scripts/vendor/parallax.js"></script>
@@ -84,12 +86,20 @@
             <div class="project-container" ontouchstart="this.classList.toggle('hover');" href="https://gentle-everglades-8217.herokuapp.com/">
             	<div class="flipper">
             		<div class="front">
-            			<img src="images/projects/Road%20Trip%20Roulette.png" alt="Road Trip Roulette" class="project">
-                  <span class="fa fa-share fa-3x"></span>
+            			<div class="project roadtrip"></div>
+                  <div class="project-info">
+                    <a href="https://github.com/raymondwang/Road-Trip-Roulette"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+            			  <a href="https://gentle-everglades-8217.herokuapp.com/" class="project-title">Road Trip Roulette</a>
+                    <p class="project-summary">
+                      An app that generates a road trip with directions and nearby attractions.
+                      <br><br>
+                      Built on Rails, using Google Maps and Yelp APIs.
+                    </p>
+            			</div>
             		</div>
             		<div class="back">
-            			<div class="project-back">
-            			  <h3 class="project-title">Road Trip Roulette</h3>
+            			<div class="project-info">
+            			  <a href="https://gentle-everglades-8217.herokuapp.com/" class="project-title">Road Trip Roulette</a>
                     <p class="project-summary">
                       An app that generates a road trip with directions and nearby attractions.
                       <br><br>
@@ -105,12 +115,20 @@
             <div class="project-container" ontouchstart="this.classList.toggle('hover');" href="http://104.236.234.206">
             	<div class="flipper">
             		<div class="front">
-            			<img src="images/projects/Emphasize.png" alt="Emphasize: a to-do list app" class="project">
-                  <span class="fa fa-share fa-3x"></span>
+            			<div class="project emphasize"></div>
+                  <div class="project-info">
+                    <a href="https://github.com/raymondwang/Emphasize"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+                    <a href="http://104.236.234.206" class="project-title">Emphasize</a>
+                    <p class="project-summary">
+                      A minimalist to-do list app designed for prioritization.
+                      <br><br>
+                      Runs primarily on Sinatra, PostgreSQL, Backbone, and JavaScript libraries.
+                    </p>
+                  </div>
             		</div>
             		<div class="back">
-            			<div class="project-back">
-            			  <h3 class="project-title">Emphasize</h3>
+            			<div class="project-info">
+            			  <a href="http://104.236.234.206" class="project-title">Emphasize</a>
                     <p class="project-summary">
                       A minimalist to-do list app designed for prioritization.
                       <br><br>
@@ -122,16 +140,24 @@
             </div>
           </div>
 
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-6 col-md-4 ancillary">
             <div class="project-container" ontouchstart="this.classList.toggle('hover');" href="http://104.236.114.64">
             	<div class="flipper">
             		<div class="front">
-            			<img src="images/projects/Not%20Chinese%20Food.png" alt="Restaurant Management App" class="project">
-                  <span class="fa fa-share fa-3x"></span>
+                  <div class="project restaurant"></div>
+                  <div class="project-info">
+                    <a href="https://github.com/raymondwang/Restaurant-App"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+            			  <a href="http://104.236.114.64" class="project-title">Not Chinese Food</a>
+                    <p class="project-summary">
+                      A restaurant management app designed for servers and cooks.
+                      <br><br>
+                      Written mostly in Ruby, a PostgreSQL database, and Sinatra. Jokes produced independently.
+                    </p>
+            			</div>
             		</div>
             		<div class="back">
-            			<div class="project-back">
-            			  <h3 class="project-title">Not Chinese Food</h3>
+            			<div class="project-info">
+            			  <a href="http://104.236.114.64" class="project-title">Not Chinese Food</a>
                     <p class="project-summary">
                       A restaurant management app designed for servers and cooks.
                       <br><br>
@@ -147,12 +173,20 @@
             <div class="project-container" ontouchstart="this.classList.toggle('hover');" href="http://raymondwang.me/Blackjack">
             	<div class="flipper">
             		<div class="front">
-            			<img src="images/projects/Blackjack.png" alt="Blackjack" class="project">
-                  <span class="fa fa-share fa-3x"></span>
+            			<div class="project blackjack"></div>
+                  <div class="project-info">
+                    <a href="https://github.com/raymondwang/Blackjack"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+            			  <a href="http://raymondwang.me/Blackjack" class="project-title">Blackjack</a>
+                    <p class="project-summary">
+                      A single-player Blackjack game designed with nostalgia.
+                      <br><br>
+                      Made with JavaScript during my third week of study at General Assembly.
+                    </p>
+            			</div>
             		</div>
             		<div class="back">
-            			<div class="project-back">
-            			  <h3 class="project-title">Blackjack</a></h3>
+            			<div class="project-info">
+            			  <a href="http://raymondwang.me/Blackjack" class="project-title">Blackjack</a>
                     <p class="project-summary">
                       A single-player Blackjack game designed with nostalgia.
                       <br><br>

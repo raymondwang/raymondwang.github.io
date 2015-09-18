@@ -29,7 +29,6 @@ $('.fa-chevron-down').on('click tap', function(e) {
 
 $('.fa-chevron-up').on('click tap', function(e) {
   relocate(e);
-  // history.pushState("", document.title, window.location.pathname);
 });
 
 // Cover parallax
@@ -40,21 +39,28 @@ if (window.matchMedia('(max-width: 600px)').matches) {
   $('#cover').parallax({imageSrc: 'images/cover.png'});
 };
 
-// Project links: WIP
-$('.project-container').on('click tap', function() {
-  // if (window.matchMedia('(max-width: 767px)').matches) {
-    window.open($(this).attr('href'), '_blank');
-  // }
+// Portfolio effects
+$('.project-container').on({
+  'mouseenter': showProjectInfo,
+  'mouseleave': hideProjectInfo,
+  'click': projectLink
 });
 
-// $('.project-title').on('click', function() {
-//   window.open($(this).attr('href'), '_blank');
-// });
+function showProjectInfo() {
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    $(this).find('.front > .project-info').animate({opacity: '1', backgroundColor: 'rgba(84, 110, 122, 0.8)'});
+  }
+}
 
-// $('.project-title').mouseenter(function() {
-//   $(this).addClass('project-title-active');
-// });
-//
-// $('.project-title').mouseleave(function() {
-//   $(this).removeClass('project-title-active');
-// });
+function hideProjectInfo() {
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    $(this).find('.front > .project-info').animate({opacity: '0', backgroundColor: 'rgba(0, 0, 0, 0)'});
+  }
+}
+
+// events on back currently unreliable
+function projectLink() {
+  if (window.matchMedia('(min-width: 768px)').matches) {
+    window.open($(this).attr('href'), '_blank');
+  }
+}

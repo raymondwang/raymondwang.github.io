@@ -132,19 +132,32 @@ section.overlay {
 
 /* Portfolio */
 .project-container {
-  cursor: pointer;
-  margin: 25px auto; }
+  margin: 25px auto;
+  perspective: 1000px; }
 
+.project-container, .project, .project-info {
+  width: 300px;
+  height: 300px;
+  min-width: 300px;
+  min-height: 300px; }
+  @media screen and (max-width: 767px) and (min-width: 575px) {
+    .project-container, .project, .project-info {
+      width: 60vw;
+      height: 60vw; } }
+  @media screen and (max-width: 574px) {
+    .project-container, .project, .project-info {
+      width: 80vw;
+      height: 80vw; } }
+
+@media screen and (max-width: 767px) {
+  .ancillary, .back {
+    display: none; } }
 @media screen and (min-width: 768px) {
-  .project-container {
-    perspective: 1000px;
-    width: 300px;
-    height: 300px; }
-
   .project-container:hover .flipper, .project-container.hover .flipper {
     -moz-transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg); }
+    transform: rotateY(180deg);
+    cursor: pointer; }
 
   .flipper {
     transition: 0.6s;
@@ -160,55 +173,57 @@ section.overlay {
     z-index: 2;
     -moz-transform: rotateY(0deg);
     -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg); } }
-.front > .project {
-  max-width: 300px;
-  max-height: 300px;
-  border: 5px solid white; }
-  @media screen and (max-width: 767px) {
-    .front > .project {
-      max-width: 80%;
-      max-height: 500px; }
-      .front > .project:hover {
-        border: 5px solid #434343;
-        cursor: pointer; } }
-.front > .fa-share {
-  text-shadow: 3px 5px 4px #434343;
-  position: absolute;
-  top: 42px;
-  left: 12%; }
-  @media screen and (min-width: 650px) and (max-width: 714px) {
-    .front > .fa-share {
-      left: 15%; } }
-  @media screen and (min-width: 715px) and (max-width: 767px) {
-    .front > .fa-share {
-      left: 18%; } }
-  @media screen and (min-width: 768px) {
-    .front > .fa-share {
-      display: none; } }
+    transform: rotateY(0deg); }
 
-.back {
-  -moz-transform: rotateY(180deg) translateZ(1px);
-  -webkit-transform: rotateY(180deg) translateZ(1px);
-  transform: rotateY(180deg) translateZ(1px);
+  .back {
+    -moz-transform: rotateY(180deg) translateZ(1px);
+    -webkit-transform: rotateY(180deg) translateZ(1px);
+    transform: rotateY(180deg) translateZ(1px);
+    position: absolute;
+    width: 100%; }
+    .back > .project-info {
+      background-color: #546e7a; } }
+.front > .project {
+  border: 5px solid white; }
+  .front > .project.roadtrip {
+    background: url("../images/projects/Road%20Trip%20Roulette.png");
+    background-size: contain; }
+  .front > .project.emphasize {
+    background: url("../images/projects/Emphasize.png");
+    background-size: contain; }
+  .front > .project.restaurant {
+    background: url("../images/projects/Not%20Chinese%20Food.png");
+    background-size: contain; }
+  .front > .project.blackjack {
+    background: url("../images/projects/Blackjack.png");
+    background-size: contain; }
+.front > .project-info {
+  opacity: 0; }
+
+.project-info {
   position: absolute;
-  width: 100%; }
-  @media screen and (max-width: 767px) {
-    .back {
-      display: none; } }
-  .back > .project-back {
-    width: 300px;
-    height: 300px;
-    padding: 0 25px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #546e7a;
-    border: 5px solid white;
-    text-align: left; }
-    .back > .project-back > .project-title {
-      font-family: "Raleway", sans-serif;
-      padding: 20px 0;
-      border-bottom: 2px solid white; }
+  top: 0;
+  border: 5px solid white;
+  padding: 0 25px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; }
+
+.project-title {
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-size: 24px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 1.1;
+  padding: 20px 0;
+  border-bottom: 2px solid white; }
+  .project-title:hover {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer; }
 
 #experience > .container {
   padding-left: 10vw;

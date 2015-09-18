@@ -3,3 +3,8 @@
 A personal website with a brief bio, selected portfolio projects, a professional resume, and specified skills. Hosted via Github; written with Sass, Bootstrap, JavaScript, and jQuery. Designed and created independently.
 
 ---
+
+To do:
+
+- Work on link functionality on project titles post-flip.
+- Project-info color.
