@@ -53,7 +53,7 @@ if (isMobile.any()) {
 
 // Portfolio effects
 $('.front > .project-info').on({
-  'tap': toggleProjectInfo,
+  'click tap': toggleProjectInfo,
   'mouseenter': showProjectInfo,
   'mouseleave': hideProjectInfo
 });
@@ -63,23 +63,22 @@ $('.front > .project-info').on({
 function toggleProjectInfo() {
   if (isMobile.any()) {
     if ($(this).hasClass('active-project')) {
-      $(this).animate({opacity: '0', backgroundColor: 'rgba(0, 0, 0, 0)'}).removeClass('active-project');
+      hideProjectInfo();
     } else {
-      $(this).animate({opacity: '1', backgroundColor: 'rgba(84, 110, 122, 0.85)'}).addClass('active-project');
+      showProjectInfo();
     }
   }
 }
 
-// separated from toggle in order to check screen width each time, rather than on init
 function showProjectInfo() {
   if (window.matchMedia('(max-width: 767px)').matches) {
-    $(this).animate({opacity: '1', backgroundColor: 'rgba(84, 110, 122, 0.85)'});
+    $(this).animate({opacity: '1', backgroundColor: 'rgba(84, 110, 122, 0.95)'}).removeClass('active-project');
   }
 }
 
 function hideProjectInfo() {
   if (window.matchMedia('(max-width: 767px)').matches) {
-    $(this).animate({opacity: '0', backgroundColor: 'rgba(0, 0, 0, 0)'});
+    $(this).animate({opacity: '0', backgroundColor: 'rgba(0, 0, 0, 0)'}).addClass('active-project');
   }
 }
 
