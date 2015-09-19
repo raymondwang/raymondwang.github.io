@@ -62,6 +62,12 @@ if (isMobile.any()) {
       $(this).css({textDecoration: 'none'});
     }
   });
+  $('.front > .project-info > .gh-ribbon').on('click', function(e) {
+    if ($(this).parent().css('opacity') < 1) {
+      e.preventDefault();
+      $(this).css({textDecoration: 'none'});
+    }
+  });
 } else {
   $('.front > .project-info').on({
     'mouseenter': function() {
