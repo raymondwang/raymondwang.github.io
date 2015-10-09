@@ -266,26 +266,25 @@ section.overlay {
 #skills {
   min-height: 50vh; }
 
-.skills-col {
+.skills-col:nth-child(2) {
+  border-left: 1px solid white;
   border-right: 1px solid white; }
-  .skills-col:last-of-type {
-    border-right: 0; }
+@media screen and (max-width: 767px) {
+  .skills-col {
+    border-right: 0; } }
+.skills-col > .skills-section {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px; }
+  @media screen and (min-width: 768px) {
+    .skills-col > .skills-section {
+      margin-bottom: 30px; } }
   @media screen and (max-width: 767px) {
-    .skills-col {
-      border-right: 0; } }
-  .skills-col > .skills-section {
-    font-family: "Raleway", sans-serif;
-    font-size: 24px; }
-    @media screen and (min-width: 768px) {
-      .skills-col > .skills-section {
-        margin-bottom: 30px; } }
-    @media screen and (max-width: 767px) {
-      .skills-col > .skills-section {
-        margin-top: 20px; } }
-  .skills-col > .skills-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
+    .skills-col > .skills-section {
+      margin-top: 20px; } }
+.skills-col > .skills-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
 
 #contact, footer {
   width: 100vw;

@@ -3,10 +3,9 @@
 }
 
 .skills-col {
-  border-right: 1px solid white;
-
-  &:last-of-type {
-    border-right: 0;
+  &:nth-child(2) {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
   }
   @media screen and (max-width: $breakpoint-xs) {
     border-right: 0;

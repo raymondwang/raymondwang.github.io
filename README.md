@@ -6,5 +6,5 @@ A personal website with a brief bio, selected portfolio projects, a professional
 
 To do:
 
-- Work on link functionality on project titles post-flip.
-- Project-info color.
+- Redesign skills section. SVGs likely.
+- Project-info colors are not set in stone.
