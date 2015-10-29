@@ -107,3 +107,17 @@ function hideProjectInfo(info) {
 //     window.open($(this).attr('href'), '_blank');
 //   }
 // }
+
+// Skills
+
+function setSkillsBorder(row) {
+  var borderHeight = row.height() + 'px';
+  var col = row.find('.skills-col:nth-child(even)');
+  col.css('height', borderHeight);
+}
+
+if (window.matchMedia('(min-width: 767px)').matches) {
+  for (var i = 0; i < $('.skills-row').length; i++) {
+    setSkillsBorder($('.skills-row').eq(i));
+  }
+}

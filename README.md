@@ -6,5 +6,5 @@ A personal website with a brief bio, selected portfolio projects, a professional
 
 To do:
 
-- Redesign skills section. SVGs likely.
-- Project-info colors are not set in stone.
+- Redesign skills section. SVGs likely. Borders created through JS temporary.
+- Project-info colors up in the air.
