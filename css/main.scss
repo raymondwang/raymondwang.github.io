@@ -1,0 +1,88 @@
+$breakpoint: 560px;
+
+$main-offset: 200px;
+$main-width: 80%;
+
+$color-text: #242424;
+$color-link: #5F9EA0;
+$color-contact: #808080;
+
+$font: 'Radley', serif;
+
+$font-size--lg: 3rem;
+$font-size--md: 2rem;
+$font-size--sm: 1.25rem;
+
+$transition-duration: 125ms;
+
+body {
+  display: flex;
+  margin: 0;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+main {
+  margin: -$main-offset auto 0;
+  width: $main-width;
+  color: $color-text;
+  font-family: $font;
+}
+
+.name {
+  margin: 0;
+  font-size: $font-size--md;
+}
+
+.position {
+  margin: 5px 0 20px;
+  font-size: $font-size--sm;
+}
+
+.company {
+  position: relative;
+  color: $color-link;
+  text-decoration: none;
+
+  &:hover:before {
+    right: 0;
+    left: 0;
+  }
+}
+
+.company:before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  bottom: -1px;
+  left: 50%;
+  height: 3px;
+  background: $color-link;
+  transition-property: right, left;
+  transition-duration: $transition-duration;
+  transition-timing-function: ease-out;
+}
+
+.contact {
+  margin-right: $font-size--sm;
+  color: $color-contact;
+  text-decoration: none;
+  font-size: $font-size--md;
+  transition: color $transition-duration ease-out;
+
+  &:hover {
+    color: $color-link;
+  }
+}
+
+@media (min-width: $breakpoint) {
+  .name {
+    font-size: $font-size--lg;
+  }
+
+  .position {
+    font-size: $font-size--md;
+  }
+}

@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  margin: 0;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden; }
+
+main {
+  margin: -200px auto 0;
+  width: 80%;
+  color: #242424;
+  font-family: "Radley", serif; }
+
+.name {
+  margin: 0;
+  font-size: 2rem; }
+
+.position {
+  margin: 5px 0 20px;
+  font-size: 1.25rem; }
+
+.company {
+  position: relative;
+  color: #5F9EA0;
+  text-decoration: none; }
+  .company:hover:before {
+    right: 0;
+    left: 0; }
+
+.company:before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  bottom: -1px;
+  left: 50%;
+  height: 3px;
+  background: #5F9EA0;
+  transition-property: right, left;
+  transition-duration: 125ms;
+  transition-timing-function: ease-out; }
+
+.contact {
+  margin-right: 1.25rem;
+  color: #808080;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: color 125ms ease-out; }
+  .contact:hover {
+    color: #5F9EA0; }
+
+@media (min-width: 560px) {
+  .name {
+    font-size: 3rem; }
+
+  .position {
+    font-size: 2rem; } }
+
+/*# sourceMappingURL=main.css.map */
