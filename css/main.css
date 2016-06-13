@@ -8,17 +8,27 @@ body {
 
 main {
   margin: -200px auto 0;
-  width: 80%;
+  width: 80vw;
   color: #242424;
-  font-family: "Radley", serif; }
+  font-family: "Radley", "Palatino", serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
-.name {
+.title {
   margin: 0;
-  font-size: 2rem; }
+  font-size: 32px; }
+  @media (min-width: 560px) {
+    .title {
+      font-size: 48px; } }
 
 .position {
-  margin: 5px 0 20px;
-  font-size: 1.25rem; }
+  margin: 5px 0 15px;
+  font-size: 20px; }
+  @media (min-width: 560px) {
+    .position {
+      margin-bottom: 20px;
+      font-size: 32px; } }
 
 .company {
   position: relative;
@@ -41,19 +51,12 @@ main {
   transition-timing-function: ease-out; }
 
 .contact {
-  margin-right: 1.25rem;
+  margin-right: 20px;
   color: #808080;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 32px;
   transition: color 125ms ease-out; }
   .contact:hover {
     color: #5F9EA0; }
-
-@media (min-width: 560px) {
-  .name {
-    font-size: 3rem; }
-
-  .position {
-    font-size: 2rem; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,19 +1,20 @@
 $breakpoint: 560px;
 
-$main-offset: 200px;
-$main-width: 80%;
+$main-offset: -200px;
+$main-width: 80vw;
 
 $color-text: #242424;
 $color-link: #5F9EA0;
 $color-contact: #808080;
 
-$font: 'Radley', serif;
+$font: 'Radley', 'Palatino', serif;
 
-$font-size--lg: 3rem;
-$font-size--md: 2rem;
-$font-size--sm: 1.25rem;
+$font-size--lg: 48px;
+$font-size--md: 32px;
+$font-size--sm: 20px;
 
 $transition-duration: 125ms;
+$transition-timing: ease-out;
 
 body {
   display: flex;
@@ -25,20 +26,33 @@ body {
 }
 
 main {
-  margin: -$main-offset auto 0;
+  margin: $main-offset auto 0;
   width: $main-width;
   color: $color-text;
   font-family: $font;
+  // text antialiasing
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.name {
+.title {
   margin: 0;
   font-size: $font-size--md;
+
+  @media (min-width: $breakpoint) {
+    font-size: $font-size--lg;
+  }
 }
 
 .position {
-  margin: 5px 0 20px;
+  margin: 5px 0 15px;
   font-size: $font-size--sm;
+
+  @media (min-width: $breakpoint) {
+    margin-bottom: 20px;
+    font-size: $font-size--md;
+  }
 }
 
 .company {
@@ -62,7 +76,7 @@ main {
   background: $color-link;
   transition-property: right, left;
   transition-duration: $transition-duration;
-  transition-timing-function: ease-out;
+  transition-timing-function: $transition-timing;
 }
 
 .contact {
@@ -70,19 +84,9 @@ main {
   color: $color-contact;
   text-decoration: none;
   font-size: $font-size--md;
-  transition: color $transition-duration ease-out;
+  transition: color $transition-duration $transition-timing;
 
   &:hover {
     color: $color-link;
-  }
-}
-
-@media (min-width: $breakpoint) {
-  .name {
-    font-size: $font-size--lg;
-  }
-
-  .position {
-    font-size: $font-size--md;
   }
 }
