@@ -1,20 +1,26 @@
 $breakpoint: 560px;
 
-$main-offset: -200px;
-$main-width: 80vw;
-
 $color-text: #242424;
 $color-link: #5F9EA0;
 $color-contact: #808080;
 
-$font: 'Radley', 'Palatino', serif;
-
-$font-size--lg: 48px;
-$font-size--md: 32px;
 $font-size--sm: 20px;
+$font-size--md: 32px;
+$font-size--lg: 48px;
 
 $transition-duration: 125ms;
 $transition-timing: ease-out;
+
+@font-face {
+  font-family: 'Radley';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Radley'), url('../fonts/Radley-Regular.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   display: flex;
@@ -23,17 +29,17 @@ body {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 main {
-  margin: $main-offset auto 0;
-  width: $main-width;
+  margin: -200px auto 0;
+  width: 80vw;
   color: $color-text;
-  font-family: $font;
-  // text antialiasing
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Radley', serif;
 }
 
 .title {
@@ -67,11 +73,12 @@ main {
 }
 
 .company:before {
-  content: "";
+  content: '';
   position: absolute;
   right: 50%;
   bottom: -1px;
   left: 50%;
+  border-radius: 1px;
   height: 3px;
   background: $color-link;
   transition-property: right, left;
@@ -85,8 +92,18 @@ main {
   text-decoration: none;
   font-size: $font-size--md;
   transition: color $transition-duration $transition-timing;
+  user-select: none;
 
   &:hover {
     color: $color-link;
   }
+}
+
+.title::selection,
+.position::selection {
+  color: $color-link;
+}
+
+.company::selection {
+  color: $color-text;
 }

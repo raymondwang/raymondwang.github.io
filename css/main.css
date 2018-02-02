@@ -1,19 +1,28 @@
+@font-face {
+  font-family: 'Radley';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Radley"), url("../fonts/Radley-Regular.ttf") format("truetype"); }
+* {
+  box-sizing: border-box; }
+
 body {
   display: flex;
   margin: 0;
   height: 100vh;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden; }
+  overflow: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
 
 main {
   margin: -200px auto 0;
   width: 80vw;
   color: #242424;
-  font-family: "Radley", "Palatino", serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  font-family: 'Radley', serif; }
 
 .title {
   margin: 0;
@@ -39,11 +48,12 @@ main {
     left: 0; }
 
 .company:before {
-  content: "";
+  content: '';
   position: absolute;
   right: 50%;
   bottom: -1px;
   left: 50%;
+  border-radius: 1px;
   height: 3px;
   background: #5F9EA0;
   transition-property: right, left;
@@ -55,8 +65,16 @@ main {
   color: #808080;
   text-decoration: none;
   font-size: 32px;
-  transition: color 125ms ease-out; }
+  transition: color 125ms ease-out;
+  user-select: none; }
   .contact:hover {
     color: #5F9EA0; }
+
+.title::selection,
+.position::selection {
+  color: #5F9EA0; }
+
+.company::selection {
+  color: #242424; }
 
 /*# sourceMappingURL=main.css.map */
