@@ -24,6 +24,7 @@ jobs:
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
+          npm run prepare
           npm run build
 
       - name: Upload Artifacts
