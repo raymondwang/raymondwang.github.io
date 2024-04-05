@@ -1,6 +1,7 @@
 <main class="container px-8 sm:mx-auto">
-  <h1 class="mt-40 text-4xl sm:mt-60 sm:text-6xl md:text-8xl">Raymond Wang</h1>
-  <h2 class="mt-4 text-2xl">
+  <p class="mt-40 sm:mt-60">hey, I'm</p>
+  <h1 class="font-display text-4xl sm:text-6xl md:text-8xl">Raymond</h1>
+  <h2 class="mt-8 text-2xl">
     Software Engineer at
     <a
       class="hover:underline hover:underline-offset-4"
