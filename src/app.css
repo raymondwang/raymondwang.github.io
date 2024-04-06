@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Tilt+Warp&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './fonts.css';
+
+@layer base {
+  :root {
+    --background-color: #051f82;
+    --text-color: #89c4f3;
+  }
+}

@@ -6,13 +6,10 @@ const config: Config = {
   plugins: [],
   theme: {
     fontFamily: {
-      sans: ['"Tilt Warp"', ...defaultTheme.fontFamily.sans],
+      sans: ['Satoshi', ...defaultTheme.fontFamily.sans],
+      serif: ['Erode', ...defaultTheme.fontFamily.serif],
     },
-    extend: {
-      fontFamily: {
-        display: ['"Protest Riot"', ...defaultTheme.fontFamily.sans],
-      },
-    },
+    extend: {},
   },
 };
 

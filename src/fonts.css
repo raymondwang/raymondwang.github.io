@@ -1,0 +1,41 @@
+@layer base {
+  @font-face {
+    font-family: 'Satoshi';
+    src:
+      url('/fonts/Satoshi-Variable.woff2') format('woff2'),
+      url('/fonts/Satoshi-Variable.woff') format('woff');
+    font-weight: 300 900;
+    font-display: block;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Satoshi';
+    src:
+      url('/fonts/Satoshi-VariableItalic.woff2') format('woff2'),
+      url('/fonts/Satoshi-VariableItalic.woff') format('woff');
+    font-weight: 300 900;
+    font-display: block;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Erode';
+    src:
+      url('/fonts/Erode-Variable.woff2') format('woff2'),
+      url('/fonts/Erode-Variable.woff') format('woff');
+    font-weight: 300 700;
+    font-display: block;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Erode';
+    src:
+      url('/fonts/Erode-VariableItalic.woff2') format('woff2'),
+      url('/fonts/Erode-VariableItalic.woff') format('woff');
+    font-weight: 300 700;
+    font-display: block;
+    font-style: italic;
+  }
+}
