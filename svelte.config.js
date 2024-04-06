@@ -5,8 +5,6 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
   kit: {
     adapter: adapter(),
-    // GitHub Pages can't serve content from directories with underscores:
-    appDir: 'app',
   },
   // https://kit.svelte.dev/docs/integrations#preprocessors
   preprocess: vitePreprocess(),
