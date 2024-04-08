@@ -4,8 +4,7 @@
 
 <svg
   class={className}
-  width="auto"
-  height="16vw"
+  height="8rem"
   viewBox="0 0 409 82"
   fill="currentColor"
   xmlns="http://www.w3.org/2000/svg"

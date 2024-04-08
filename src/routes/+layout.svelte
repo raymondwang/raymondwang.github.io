@@ -9,4 +9,11 @@
   <title>r@ymond.wang</title>
 </svelte:head>
 
+<!-- <header class="p-4">
+  <nav class="flex justify-end gap-x-4">
+    <a href="/">home</a>
+    <a href="/now">now</a>
+  </nav>
+</header> -->
+
 <slot />
