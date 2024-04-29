@@ -1,0 +1,13 @@
+---
+date: '2024/04/28'
+---
+
+<script lang="ts">
+  import { formatDate } from "$lib";
+</script>
+
+# Now
+
+Hello world!
+
+Last updated on {formatDate(date)}.
