@@ -3,8 +3,7 @@
   <h1 class="text-6xl font-bold sm:text-8xl">Raymond</h1>
   <p class="mt-4">& I’m passionate about building fun digital experiences.</p>
   <p class="mt-4">
-    I’m currently a Principal Engineer at Atlassian, where I focus on making
-    Trello more delightful, and lead efforts to modernize our frontend stack.
+    I’m currently a Staff Software Engineer at Airbnb.
   </p>
   <ul class="mt-4 flex flex-row gap-x-4">
     <li>
